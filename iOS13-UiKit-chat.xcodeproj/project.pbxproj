@@ -13,6 +13,10 @@
 		84D6441327CD1C85003C4679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D6441127CD1C85003C4679 /* Main.storyboard */; };
 		84D6441527CD1C88003C4679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D6441427CD1C88003C4679 /* Assets.xcassets */; };
 		84D6441827CD1C88003C4679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D6441627CD1C88003C4679 /* LaunchScreen.storyboard */; };
+		84D6442427CD1D46003C4679 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442327CD1D46003C4679 /* WelcomViewController.swift */; };
+		84D6442627CD1D61003C4679 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442527CD1D61003C4679 /* RegisterViewController.swift */; };
+		84D6442827CD1D73003C4679 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442727CD1D73003C4679 /* LoginViewController.swift */; };
+		84D6442A27CD1D84003C4679 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442927CD1D84003C4679 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		84D6441427CD1C88003C4679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D6441727CD1C88003C4679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D6441927CD1C88003C4679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D6442327CD1D46003C4679 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
+		84D6442527CD1D61003C4679 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		84D6442727CD1D73003C4679 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84D6442927CD1D84003C4679 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		84D6440A27CD1C85003C4679 /* iOS13-UiKit-chat */ = {
 			isa = PBXGroup;
 			children = (
+				84D6442227CD1D21003C4679 /* Controllers */,
+				84D6442127CD1D1A003C4679 /* Models */,
+				84D6442027CD1D12003C4679 /* Views */,
 				84D6440B27CD1C85003C4679 /* AppDelegate.swift */,
 				84D6440D27CD1C85003C4679 /* SceneDelegate.swift */,
 				84D6440F27CD1C85003C4679 /* ViewController.swift */,
-				84D6441127CD1C85003C4679 /* Main.storyboard */,
 				84D6441427CD1C88003C4679 /* Assets.xcassets */,
 				84D6441627CD1C88003C4679 /* LaunchScreen.storyboard */,
 				84D6441927CD1C88003C4679 /* Info.plist */,
 			);
 			path = "iOS13-UiKit-chat";
+			sourceTree = "<group>";
+		};
+		84D6442027CD1D12003C4679 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84D6441127CD1C85003C4679 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84D6442127CD1D1A003C4679 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84D6442227CD1D21003C4679 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84D6442327CD1D46003C4679 /* WelcomViewController.swift */,
+				84D6442527CD1D61003C4679 /* RegisterViewController.swift */,
+				84D6442727CD1D73003C4679 /* LoginViewController.swift */,
+				84D6442927CD1D84003C4679 /* ChatViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D6442827CD1D73003C4679 /* LoginViewController.swift in Sources */,
 				84D6441027CD1C85003C4679 /* ViewController.swift in Sources */,
+				84D6442627CD1D61003C4679 /* RegisterViewController.swift in Sources */,
+				84D6442A27CD1D84003C4679 /* ChatViewController.swift in Sources */,
 				84D6440C27CD1C85003C4679 /* AppDelegate.swift in Sources */,
 				84D6440E27CD1C85003C4679 /* SceneDelegate.swift in Sources */,
+				84D6442427CD1D46003C4679 /* WelcomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +337,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +366,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
