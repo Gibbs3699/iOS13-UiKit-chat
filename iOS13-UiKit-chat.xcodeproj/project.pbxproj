@@ -18,6 +18,8 @@
 		84D6442627CD1D61003C4679 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442527CD1D61003C4679 /* RegisterViewController.swift */; };
 		84D6442827CD1D73003C4679 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442727CD1D73003C4679 /* LoginViewController.swift */; };
 		84D6442A27CD1D84003C4679 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442927CD1D84003C4679 /* ChatViewController.swift */; };
+		84D6442C27CE8000003C4679 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D6442B27CE8000003C4679 /* GoogleService-Info.plist */; };
+		84D6442F27CE811E003C4679 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84D6442E27CE811E003C4679 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		84D6442527CD1D61003C4679 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		84D6442727CD1D73003C4679 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84D6442927CD1D84003C4679 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		84D6442B27CE8000003C4679 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9784F98ACEF4ECACFE24253D /* Pods-iOS13-UiKit-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS13-UiKit-chat.debug.xcconfig"; path = "Target Support Files/Pods-iOS13-UiKit-chat/Pods-iOS13-UiKit-chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6814C7DE58DB33C41B43D786 /* Pods_iOS13_UiKit_chat.framework in Frameworks */,
+				84D6442F27CE811E003C4679 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				84D6441427CD1C88003C4679 /* Assets.xcassets */,
 				84D6441627CD1C88003C4679 /* LaunchScreen.storyboard */,
 				84D6441927CD1C88003C4679 /* Info.plist */,
+				84D6442B27CE8000003C4679 /* GoogleService-Info.plist */,
 			);
 			path = "iOS13-UiKit-chat";
 			sourceTree = "<group>";
@@ -124,7 +129,6 @@
 				9784F98ACEF4ECACFE24253D /* Pods-iOS13-UiKit-chat.debug.xcconfig */,
 				36CB149FBD9FB4B7FC68D496 /* Pods-iOS13-UiKit-chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +150,9 @@
 			dependencies = (
 			);
 			name = "iOS13-UiKit-chat";
+			packageProductDependencies = (
+				84D6442E27CE811E003C4679 /* FirebaseAuth */,
+			);
 			productName = "iOS13-UiKit-chat";
 			productReference = 84D6440827CD1C85003C4679 /* iOS13-UiKit-chat.app */;
 			productType = "com.apple.product-type.application";
@@ -174,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 84D643FF27CD1C85003C4679;
+			packageReferences = (
+				84D6442D27CE811E003C4679 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 84D6440927CD1C85003C4679 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D6441827CD1C88003C4679 /* LaunchScreen.storyboard in Resources */,
+				84D6442C27CE8000003C4679 /* GoogleService-Info.plist in Resources */,
 				84D6441527CD1C88003C4679 /* Assets.xcassets in Resources */,
 				84D6441327CD1C85003C4679 /* Main.storyboard in Resources */,
 			);
@@ -473,6 +484,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84D6442D27CE811E003C4679 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84D6442E27CE811E003C4679 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84D6442D27CE811E003C4679 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84D6440027CD1C85003C4679 /* Project object */;
 }
