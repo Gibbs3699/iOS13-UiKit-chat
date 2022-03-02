@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6814C7DE58DB33C41B43D786 /* Pods_iOS13_UiKit_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152723DF45A3838A89105704 /* Pods_iOS13_UiKit_chat.framework */; };
+		84CD782F27CFC7750021513A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD782E27CFC7750021513A /* Constants.swift */; };
 		84D6440C27CD1C85003C4679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6440B27CD1C85003C4679 /* AppDelegate.swift */; };
 		84D6440E27CD1C85003C4679 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6440D27CD1C85003C4679 /* SceneDelegate.swift */; };
 		84D6441027CD1C85003C4679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6440F27CD1C85003C4679 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		152723DF45A3838A89105704 /* Pods_iOS13_UiKit_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS13_UiKit_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CB149FBD9FB4B7FC68D496 /* Pods-iOS13-UiKit-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS13-UiKit-chat.release.xcconfig"; path = "Target Support Files/Pods-iOS13-UiKit-chat/Pods-iOS13-UiKit-chat.release.xcconfig"; sourceTree = "<group>"; };
+		84CD782E27CFC7750021513A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84D6440827CD1C85003C4679 /* iOS13-UiKit-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS13-UiKit-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D6440B27CD1C85003C4679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D6440D27CD1C85003C4679 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		84D6442127CD1D1A003C4679 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84CD782E27CFC7750021513A /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				84D6440C27CD1C85003C4679 /* AppDelegate.swift in Sources */,
 				84D6440E27CD1C85003C4679 /* SceneDelegate.swift in Sources */,
 				84D6442427CD1D46003C4679 /* WelcomViewController.swift in Sources */,
+				84CD782F27CFC7750021513A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
