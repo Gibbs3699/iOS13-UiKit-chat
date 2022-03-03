@@ -8,10 +8,12 @@
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
+    
+    let db = Firestore.firestore()
     
     var messages: [Message] = [
         Message(sender: "You", body: "Hi!"),
@@ -20,6 +22,7 @@ class ChatViewController: UIViewController {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageTextfield.delegate = self
         title = Constants.appName
         tableView.dataSource = self
         navigationItem.hidesBackButton = true
@@ -27,7 +30,21 @@ class ChatViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return messageTextfield.resignFirstResponder()
+    }
+    
     @IBAction func sendPressed(_ sender: UIButton) {
+        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField : messageSender, Constants.FStore.bodyField : messageBody]) { error in
+                if let e = error {
+                    print("These was an issue \(e).")
+                }else {
+                    print("Successfully saved data.")
+                }
+            }
+            
+        }
     }
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
