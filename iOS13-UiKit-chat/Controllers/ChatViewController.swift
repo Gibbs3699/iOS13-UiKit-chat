@@ -34,7 +34,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     func loadMessages() {
         messages = []
-        db.collection(Constants.FStore.collectionName).getDocuments() { (querySnapshot, error) in
+        db.collection(Constants.FStore.collectionName)
+            .order(by: Constants.FStore.dateField)
+            .addSnapshotListener() { (querySnapshot, error) in
+            self.messages = []
             if let e = error {
                 print("These was an issue \(e).")
             }else {
@@ -57,7 +60,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func sendPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField : messageSender, Constants.FStore.bodyField : messageBody]) { error in
+            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField : messageSender, Constants.FStore.bodyField : messageBody, Constants.FStore.dateField : Date().timeIntervalSince1970]) { error in
                 if let e = error {
                     print("These was an issue \(e).")
                 }else {
